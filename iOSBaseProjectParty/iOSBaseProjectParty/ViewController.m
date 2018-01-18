@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+#import "VersionApi.h"
+#import "NetWorkingRespose.h"
+#import "NSObject+YYModel.h"
+
 @interface ViewController ()
 
 @end
@@ -18,6 +22,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"This is a new start !");
+    
+    VersionApi *api = [[VersionApi alloc] init];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"%@",request);
+        if (request.responseString) {
+            NetWorkingRespose *response = [NetWorkingRespose modelWithJSON:request.responseString];
+            if ([response.code isEqualToString:MBCode_SUCCESS]) {
+                VersionModel *model = [VersionModel modelWithDictionary:response.data];
+                NSLog(@"%@",model);
+            }else{
+                
+            }
+        }
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"%@",request);
+    }];
 }
 
 
