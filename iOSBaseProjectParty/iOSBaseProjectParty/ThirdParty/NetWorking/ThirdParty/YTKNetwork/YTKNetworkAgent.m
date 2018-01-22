@@ -372,6 +372,13 @@
             request.successCompletionBlock(request);
         }
         [request toggleAccessoriesDidStopCallBack];
+        
+#if DEBUG
+        NSLog(@"%@",request);
+#else
+        
+#endif
+        
     });
 }
 
@@ -412,6 +419,12 @@
             request.failureCompletionBlock(request);
         }
         [request toggleAccessoriesDidStopCallBack];
+        
+#if DEBUG
+        NSLog(@"%@",request);
+#else
+        
+#endif
     });
 }
 

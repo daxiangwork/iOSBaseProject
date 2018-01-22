@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NetWorkingUtil sharedNetWorkingUtil];
+    [[NetWorkingUtil sharedNetWorkingUtil] startEngine];
     return YES;
 }
 

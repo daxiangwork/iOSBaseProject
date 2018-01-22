@@ -25,7 +25,6 @@
     
     VersionApi *api = [[VersionApi alloc] init];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-        NSLog(@"%@",request);
         if (request.responseString) {
             NetWorkingRespose *response = [NetWorkingRespose modelWithJSON:request.responseString];
             if ([response.code isEqualToString:MBCode_SUCCESS]) {

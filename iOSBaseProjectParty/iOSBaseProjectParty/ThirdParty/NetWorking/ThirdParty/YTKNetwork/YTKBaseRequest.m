@@ -205,7 +205,7 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 #pragma mark - NSObject
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<%@: %p>{ URL: %@ } { method: %@ } { arguments: %@ }", NSStringFromClass([self class]), self, self.currentRequest.URL, self.currentRequest.HTTPMethod, self.requestArgument];
+    return [NSString stringWithFormat:@"===============================NetWorkingLog===============================r\n\r\n== { %@:%p }\r\n== { URL:%@ }\r\n== { Method: %@ }\r\n== { Arguments: %@ }\r\n== { Respons : Status Code: %ld }\r\n== { ResponsJson :\r\n\r\n %@ \r\n\r\n===============================END NetWorkingLog===============================", NSStringFromClass([self class]), self, self.currentRequest.URL, self.currentRequest.HTTPMethod, self.requestArgument,self.response.statusCode,self.responseString];
 }
 
 @end

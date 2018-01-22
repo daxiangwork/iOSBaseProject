@@ -12,6 +12,7 @@
 1、将整个NetWorking文件夹拷贝到工程目录下，添加到工程中（前提是已经将CoreMacro和CommonUtil加入工程中）
 2、在CoreMacro.h文件中修改BaseHttpUrl指向你需要的根服务器地址
 3、在NetWorkingCommonParameter的init()方法中设置你需要的公共请求参数
+4、在AppDelegate程序启动函数中，调用[[NetWorkingUtil sharedNetWorkingUtil] startEngine];启动网络引擎
 4、创建例如：VersionApi继承自YTKRequest，重载里面的相关方法
 5、根据你的服务器返回数据结构设置NetWorkingRespose的结构
 6、在适当的地方发起请求例如：
