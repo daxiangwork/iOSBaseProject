@@ -126,6 +126,11 @@
 		0765C4BF20158FB900C0B3C1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765C4B220158FB900C0B3C1 /* DDFileLogger.m */; };
 		0765C4C020158FB900C0B3C1 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765C4B420158FB900C0B3C1 /* DDASLLogCapture.m */; };
 		0765C4C420159AFE00C0B3C1 /* CocoaLumberjack使用说明 in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4C320159AFE00C0B3C1 /* CocoaLumberjack使用说明 */; };
+		0765C4C82015B69500C0B3C1 /* EEFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765C4C72015B69500C0B3C1 /* EEFileManager.m */; };
+		0765C4CB2015B82D00C0B3C1 /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765C4CA2015B82D00C0B3C1 /* FCFileManager.m */; };
+		0765C4CD2015CB5900C0B3C1 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4CC2015CB5900C0B3C1 /* timg.jpeg */; };
+		0765C4CF2015D02200C0B3C1 /* tm.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4CE2015D02200C0B3C1 /* tm.jpeg */; };
+		0765C4D12015D09C00C0B3C1 /* EEFileManager使用说明 in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4D02015D09C00C0B3C1 /* EEFileManager使用说明 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -374,6 +379,13 @@
 		0765C4B320158FB900C0B3C1 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
 		0765C4B420158FB900C0B3C1 /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
 		0765C4C320159AFE00C0B3C1 /* CocoaLumberjack使用说明 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CocoaLumberjack使用说明"; sourceTree = "<group>"; };
+		0765C4C62015B69500C0B3C1 /* EEFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EEFileManager.h; sourceTree = "<group>"; };
+		0765C4C72015B69500C0B3C1 /* EEFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EEFileManager.m; sourceTree = "<group>"; };
+		0765C4C92015B82D00C0B3C1 /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		0765C4CA2015B82D00C0B3C1 /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
+		0765C4CC2015CB5900C0B3C1 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		0765C4CE2015D02200C0B3C1 /* tm.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tm.jpeg; sourceTree = "<group>"; };
+		0765C4D02015D09C00C0B3C1 /* EEFileManager使用说明 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "EEFileManager使用说明"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +402,7 @@
 		07112994201088040044A6A7 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				0765C4C52015B66E00C0B3C1 /* FileManager */,
 				0765C49620158FB900C0B3C1 /* CocoaLumberjack */,
 				071129D0201095650044A6A7 /* CoreMacro */,
 				071129CE201093A20044A6A7 /* CommonUtil */,
@@ -794,6 +807,8 @@
 				07463E9A2010795600A7BFC3 /* AppDelegate.m */,
 				07463E9C2010795600A7BFC3 /* ViewController.h */,
 				07463E9D2010795600A7BFC3 /* ViewController.m */,
+				0765C4CC2015CB5900C0B3C1 /* timg.jpeg */,
+				0765C4CE2015D02200C0B3C1 /* tm.jpeg */,
 				07463E9F2010795600A7BFC3 /* Main.storyboard */,
 				07463EA22010795600A7BFC3 /* Assets.xcassets */,
 				07463EA42010795600A7BFC3 /* LaunchScreen.storyboard */,
@@ -852,6 +867,18 @@
 				0765C4AA20158FB900C0B3C1 /* DDDispatchQueueLogFormatter.h */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0765C4C52015B66E00C0B3C1 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				0765C4C62015B69500C0B3C1 /* EEFileManager.h */,
+				0765C4C72015B69500C0B3C1 /* EEFileManager.m */,
+				0765C4C92015B82D00C0B3C1 /* FCFileManager.h */,
+				0765C4CA2015B82D00C0B3C1 /* FCFileManager.m */,
+				0765C4D02015D09C00C0B3C1 /* EEFileManager使用说明 */,
+			);
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -914,9 +941,12 @@
 			files = (
 				07463EA62010795600A7BFC3 /* LaunchScreen.storyboard in Resources */,
 				0765C4C420159AFE00C0B3C1 /* CocoaLumberjack使用说明 in Resources */,
+				0765C4CD2015CB5900C0B3C1 /* timg.jpeg in Resources */,
+				0765C4CF2015D02200C0B3C1 /* tm.jpeg in Resources */,
 				07463EA32010795600A7BFC3 /* Assets.xcassets in Resources */,
 				07112AE22010AF4C0044A6A7 /* NetWorking使用步骤 in Resources */,
 				07463EA12010795600A7BFC3 /* Main.storyboard in Resources */,
+				0765C4D12015D09C00C0B3C1 /* EEFileManager使用说明 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,6 +975,7 @@
 				07112AC72010AC0C0044A6A7 /* NSData+YYAdd.m in Sources */,
 				07112AD52010AC0C0044A6A7 /* YYThreadSafeDictionary.m in Sources */,
 				07112ACF2010AC0C0044A6A7 /* NSDictionary+YYAdd.m in Sources */,
+				0765C4C82015B69500C0B3C1 /* EEFileManager.m in Sources */,
 				07112AD62010AC0C0044A6A7 /* YYSentinel.m in Sources */,
 				071129BE201088040044A6A7 /* AFSecurityPolicy.m in Sources */,
 				07112ABA2010AC0C0044A6A7 /* UITableView+YYAdd.m in Sources */,
@@ -956,6 +987,7 @@
 				07112A982010AC0C0044A6A7 /* _YYWebImageSetter.m in Sources */,
 				07112ABF2010AC0C0044A6A7 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				0765C4BD20158FB900C0B3C1 /* DDLog.m in Sources */,
+				0765C4CB2015B82D00C0B3C1 /* FCFileManager.m in Sources */,
 				07112AC22010AC0C0044A6A7 /* UIFont+YYAdd.m in Sources */,
 				07112A9F2010AC0C0044A6A7 /* NSObject+YYModel.m in Sources */,
 				07112AC62010AC0C0044A6A7 /* NSObject+YYAdd.m in Sources */,

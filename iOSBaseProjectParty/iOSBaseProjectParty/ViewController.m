@@ -12,6 +12,7 @@
 #import "NetWorkingRespose.h"
 #import "NSObject+YYModel.h"
 #import "CocoaLumberjack.h"
+#import "EEFileManager.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,24 @@
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         NSLog(@"%@",request);
     }];
+    
+    
+    //图片
+    NSData *photoData = UIImagePNGRepresentation([UIImage imageNamed:@"timg.jpeg"]);
+    NSString *filePath = [[EEFileManager sharedEEFileManager] createFilePath:@"R1200GSADV" fileType:EEFileType_Image extension:@".jpeg"];
+    BOOL ret = [[EEFileManager sharedEEFileManager] saveFile:filePath data:photoData];
+    
+    NSData *photo1Data = UIImagePNGRepresentation([UIImage imageNamed:@"tm.jpeg"]);
+    NSString *file1Path = [[EEFileManager sharedEEFileManager] createFilePath:@"R1200GSADV" fileType:EEFileType_Image extension:@".jpeg"];
+    BOOL ret1 = [[EEFileManager sharedEEFileManager] saveFile:file1Path data:photo1Data];
+
+    
+    NSData *imageddd = [[EEFileManager sharedEEFileManager] getFile:filePath];
+    UIImage *imaggg = [UIImage imageWithData:imageddd];
+    NSLog(@"====");
+    
+    BOOL ret2 = [[EEFileManager sharedEEFileManager] removeFile:file1Path];
+    BOOL ret3 = [[EEFileManager sharedEEFileManager] removeFile:filePath];
 }
 
 

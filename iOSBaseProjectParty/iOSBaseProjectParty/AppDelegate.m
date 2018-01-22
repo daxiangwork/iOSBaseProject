@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NetWorkingUtil.h"
 #import "CocoaLumberjack.h"
+#import "EEFileManager.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,12 @@
     [[NetWorkingUtil sharedNetWorkingUtil] startEngine];
     //初始化log输出引擎
     [self initLogEngine];
+    //初始化文件管理模块
+    [self initEEFileManager];
+    
+    
+    
+    
     return YES;
 }
 
@@ -66,6 +73,13 @@
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:[UIColor redColor] forFlag:DDLogFlagInfo];
 }
+
+#pragma mark - < 文件管理模块 >
+
+- (void)initEEFileManager{
+    [[EEFileManager sharedEEFileManager] setFileSystemRootName:@"18810091131"];
+}
+
 
 
 @end
