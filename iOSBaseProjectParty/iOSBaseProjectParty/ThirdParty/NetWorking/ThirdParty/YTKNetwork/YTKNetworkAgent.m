@@ -25,6 +25,7 @@
 #import "YTKNetworkConfig.h"
 #import "YTKNetworkPrivate.h"
 #import <pthread/pthread.h>
+#import "CocoaLumberjack.h"
 
 #if __has_include(<AFNetworking/AFNetworking.h>)
 #import <AFNetworking/AFNetworking.h>
@@ -373,11 +374,7 @@
         }
         [request toggleAccessoriesDidStopCallBack];
         
-#if DEBUG
-        NSLog(@"%@",request);
-#else
-        
-#endif
+        DDLogInfo(@"%@",request);
         
     });
 }
@@ -420,11 +417,8 @@
         }
         [request toggleAccessoriesDidStopCallBack];
         
-#if DEBUG
-        NSLog(@"%@",request);
-#else
-        
-#endif
+        DDLogError(@"%@",request);
+
     });
 }
 

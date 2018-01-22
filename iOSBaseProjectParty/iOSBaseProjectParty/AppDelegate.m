@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NetWorkingUtil.h"
+#import "CocoaLumberjack.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //初始化网络引擎
     [[NetWorkingUtil sharedNetWorkingUtil] startEngine];
+    //初始化log输出引擎
+    [self initLogEngine];
     return YES;
 }
 
@@ -47,6 +51,26 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - < 日志输出引擎 >
+
+- (void)initLogEngine{
+    [DDLog addLogger:[DDTTYLogger sharedInstance] withLevel:ddLogLevel];
+//    [DDLog addLogger:[DDASLLogger sharedInstance] withLevel:ddLogLevel];
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 3 * 6 * 60 * 24;//3天滚动
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 30;//最大输出文件
+    [DDLog addLogger:fileLogger withLevel:ddLogLevel];
+    
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:[UIColor redColor] forFlag:DDLogFlagInfo];
+    
+//    DDLogVerbose(@"Verbose");
+//    DDLogDebug(@"Debug");
+//    DDLogInfo(@"Info");
+//    DDLogWarn(@"Warn");
+//    DDLogError(@"Error");
 }
 
 

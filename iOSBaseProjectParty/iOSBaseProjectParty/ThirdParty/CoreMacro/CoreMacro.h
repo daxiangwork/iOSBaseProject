@@ -20,4 +20,7 @@
 #define HttpIsDebug YES
 
 
+//日志
+
+
 #endif /* CoreMacro_h */

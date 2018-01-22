@@ -11,6 +11,7 @@
 #import "VersionApi.h"
 #import "NetWorkingRespose.h"
 #import "NSObject+YYModel.h"
+#import "CocoaLumberjack.h"
 
 @interface ViewController ()
 

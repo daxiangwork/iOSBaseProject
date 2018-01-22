@@ -1,0 +1,38 @@
+/*
+CocoaLumberjack使用说明.strings
+iOSBaseProjectParty
+
+Created by Eric on 2018/1/18.
+Copyright © 2018年 Eric. All rights reserved.
+*/
+
+
+使用CocoaLumberjack组件
+
+1、将整个CocoaLumberjack文件夹拷贝到工程目录下，添加到工程中
+2、在DDLog.h头文件中，找到DDLog类定义上一行，设置日志输出级别（根据自己需求设定），如下：
+        #ifdef DEBUG
+        static const int ddLogLevel = DDLogLevelVerbose;
+        #else
+        static const int ddLogLevel = DDLogLevelWarning;
+        #endif
+3、在AppDelegate程序启动函数中，初始化日志引擎，如下：
+    - (void)initLogEngine{
+        [DDLog addLogger:[DDTTYLogger sharedInstance] withLevel:ddLogLevel];
+        //    [DDLog addLogger:[DDASLLogger sharedInstance] withLevel:ddLogLevel];
+        DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+        fileLogger.rollingFrequency = 3 * 6 * 60 * 24;//3天滚动
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 30;//最大输出文件
+        [DDLog addLogger:fileLogger withLevel:ddLogLevel];
+
+        [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+        [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:[UIColor redColor] forFlag:DDLogFlagInfo];
+
+        //    DDLogVerbose(@"Verbose");
+        //    DDLogDebug(@"Debug");
+        //    DDLogInfo(@"Info");
+        //    DDLogWarn(@"Warn");
+        //    DDLogError(@"Error");
+    }
+
+

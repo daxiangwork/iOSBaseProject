@@ -24,6 +24,7 @@
 #import "YTKBaseRequest.h"
 #import "YTKNetworkAgent.h"
 #import "YTKNetworkPrivate.h"
+#import "CocoaLumberjack.h"
 
 #if __has_include(<AFNetworking/AFNetworking.h>)
 #import <AFNetworking/AFNetworking.h>
@@ -205,7 +206,7 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 #pragma mark - NSObject
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"===============================NetWorkingLog===============================r\n\r\n== { %@:%p }\r\n== { URL:%@ }\r\n== { Method: %@ }\r\n== { Arguments: %@ }\r\n== { Respons : Status Code: %ld }\r\n== { ResponsJson :\r\n\r\n %@ \r\n\r\n===============================END NetWorkingLog===============================", NSStringFromClass([self class]), self, self.currentRequest.URL, self.currentRequest.HTTPMethod, self.requestArgument,self.response.statusCode,self.responseString];
+    return [NSString stringWithFormat:@"\r\n===============================NetWorkingLog===============================\n\r\n== { %@:%p }\r\n== { URL:%@ }\r\n== { Method: %@ }\r\n== { Arguments: %@ }\r\n== { Respons : Status Code: %ld }\r\n== { ResponsJson :\r\n\r\n %@ \r\n\r\n===============================END NetWorkingLog===============================", NSStringFromClass([self class]), self, self.currentRequest.URL, self.currentRequest.HTTPMethod, self.requestArgument,self.response.statusCode,self.responseString];
 }
 
 @end
