@@ -65,12 +65,6 @@
     
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:[UIColor redColor] forFlag:DDLogFlagInfo];
-    
-//    DDLogVerbose(@"Verbose");
-//    DDLogDebug(@"Debug");
-//    DDLogInfo(@"Info");
-//    DDLogWarn(@"Warn");
-//    DDLogError(@"Error");
 }
 
 
