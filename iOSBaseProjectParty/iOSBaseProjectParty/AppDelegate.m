@@ -10,6 +10,7 @@
 #import "NetWorkingUtil.h"
 #import "CocoaLumberjack.h"
 #import "EEFileManager.h"
+#import "EEDBManager.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +27,8 @@
     [self initLogEngine];
     //初始化文件管理模块
     [self initEEFileManager];
-    
+    //初始化DB
+    [self initDB];
     
     
     
@@ -78,6 +80,13 @@
 
 - (void)initEEFileManager{
     [[EEFileManager sharedEEFileManager] setFileSystemRootName:@"18810091131"];
+}
+
+#pragma mark - < 数据库管理 >
+
+- (void)initDB{
+    [[EEDBManager sharedEEDBManager] initCommenDB];
+    [[EEDBManager sharedEEDBManager] initDB:@"18611171457"];
 }
 
 

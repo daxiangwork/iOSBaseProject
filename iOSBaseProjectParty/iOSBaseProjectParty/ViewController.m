@@ -13,6 +13,7 @@
 #import "NSObject+YYModel.h"
 #import "CocoaLumberjack.h"
 #import "EEFileManager.h"
+#import "VersionModel.h"
 
 @interface ViewController ()
 

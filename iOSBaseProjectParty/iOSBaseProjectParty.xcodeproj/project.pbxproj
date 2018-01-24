@@ -108,6 +108,10 @@
 		07112ADD2010AC0C0044A6A7 /* YYThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 07112A8B2010AC0C0044A6A7 /* YYThreadSafeArray.m */; };
 		07112ADE2010AC0C0044A6A7 /* YYReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 07112A8C2010AC0C0044A6A7 /* YYReachability.m */; };
 		07112AE22010AF4C0044A6A7 /* NetWorking使用步骤 in Resources */ = {isa = PBXBuildFile; fileRef = 07112AE12010AF4C0044A6A7 /* NetWorking使用步骤 */; };
+		073AA3F720188C2800BFD68D /* VersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 073AA3F520188C2800BFD68D /* VersionDAO.m */; };
+		073AA3FA20188C4B00BFD68D /* VersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 073AA3F920188C4B00BFD68D /* VersionModel.m */; };
+		073AA3FD20188C9D00BFD68D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 073AA3FC20188C9D00BFD68D /* libsqlite3.tbd */; };
+		073AA40120188D1900BFD68D /* EEDBManager使用说明 in Resources */ = {isa = PBXBuildFile; fileRef = 073AA40020188D1900BFD68D /* EEDBManager使用说明 */; };
 		07463E9B2010795600A7BFC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07463E9A2010795600A7BFC3 /* AppDelegate.m */; };
 		07463E9E2010795600A7BFC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07463E9D2010795600A7BFC3 /* ViewController.m */; };
 		07463EA12010795600A7BFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07463E9F2010795600A7BFC3 /* Main.storyboard */; };
@@ -347,6 +351,12 @@
 		07112A8C2010AC0C0044A6A7 /* YYReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYReachability.m; sourceTree = "<group>"; };
 		07112A8D2010AC0C0044A6A7 /* YYSentinel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSentinel.h; sourceTree = "<group>"; };
 		07112AE12010AF4C0044A6A7 /* NetWorking使用步骤 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "NetWorking使用步骤"; sourceTree = "<group>"; };
+		073AA3F520188C2800BFD68D /* VersionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionDAO.m; sourceTree = "<group>"; };
+		073AA3F620188C2800BFD68D /* VersionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionDAO.h; sourceTree = "<group>"; };
+		073AA3F820188C4B00BFD68D /* VersionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionModel.h; sourceTree = "<group>"; };
+		073AA3F920188C4B00BFD68D /* VersionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionModel.m; sourceTree = "<group>"; };
+		073AA3FC20188C9D00BFD68D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		073AA40020188D1900BFD68D /* EEDBManager使用说明 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "EEDBManager使用说明"; sourceTree = "<group>"; };
 		07463E962010795600A7BFC3 /* iOSBaseProjectParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBaseProjectParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07463E992010795600A7BFC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07463E9A2010795600A7BFC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -412,6 +422,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073AA3FD20188C9D00BFD68D /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,11 +814,31 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		073AA3F420188C1500BFD68D /* eg. */ = {
+			isa = PBXGroup;
+			children = (
+				073AA3F820188C4B00BFD68D /* VersionModel.h */,
+				073AA3F920188C4B00BFD68D /* VersionModel.m */,
+				073AA3F620188C2800BFD68D /* VersionDAO.h */,
+				073AA3F520188C2800BFD68D /* VersionDAO.m */,
+			);
+			path = eg.;
+			sourceTree = "<group>";
+		};
+		073AA3FB20188C9D00BFD68D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				073AA3FC20188C9D00BFD68D /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		07463E8D2010795600A7BFC3 = {
 			isa = PBXGroup;
 			children = (
 				07463E982010795600A7BFC3 /* iOSBaseProjectParty */,
 				07463E972010795600A7BFC3 /* Products */,
+				073AA3FB20188C9D00BFD68D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -904,6 +935,7 @@
 		076A2CD62018713A003DF74F /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				073AA3F420188C1500BFD68D /* eg. */,
 				076A2CEC201871A0003DF74F /* EEDBManager.h */,
 				076A2CED201871A0003DF74F /* EEDBManager.m */,
 				076A2CD72018713A003DF74F /* FMDatabase.h */,
@@ -917,6 +949,7 @@
 				076A2CDF2018713A003DF74F /* FMDatabaseAdditions.h */,
 				076A2CE02018713A003DF74F /* FMDatabasePool.m */,
 				076A2CE12018713A003DF74F /* FMResultSet.m */,
+				073AA40020188D1900BFD68D /* EEDBManager使用说明 */,
 			);
 			path = FMDB;
 			sourceTree = "<group>";
@@ -983,6 +1016,7 @@
 				0765C4C420159AFE00C0B3C1 /* CocoaLumberjack使用说明 in Resources */,
 				0765C4CD2015CB5900C0B3C1 /* timg.jpeg in Resources */,
 				0765C4CF2015D02200C0B3C1 /* tm.jpeg in Resources */,
+				073AA40120188D1900BFD68D /* EEDBManager使用说明 in Resources */,
 				07463EA32010795600A7BFC3 /* Assets.xcassets in Resources */,
 				07112AE22010AF4C0044A6A7 /* NetWorking使用步骤 in Resources */,
 				07463EA12010795600A7BFC3 /* Main.storyboard in Resources */,
@@ -1039,6 +1073,7 @@
 				076A2CE52018713A003DF74F /* FMDatabase.m in Sources */,
 				07112A922010AC0C0044A6A7 /* YYImageCache.m in Sources */,
 				071129BA201088040044A6A7 /* AFHTTPSessionManager.m in Sources */,
+				073AA3F720188C2800BFD68D /* VersionDAO.m in Sources */,
 				07112AB62010AC0C0044A6A7 /* UIBezierPath+YYAdd.m in Sources */,
 				07112AC02010AC0C0044A6A7 /* UIImage+YYAdd.m in Sources */,
 				0765C4BA20158FB900C0B3C1 /* DDContextFilterLogFormatter.m in Sources */,
@@ -1048,6 +1083,7 @@
 				0765C4C020158FB900C0B3C1 /* DDASLLogCapture.m in Sources */,
 				07112A8E2010AC0C0044A6A7 /* YYDiskCache.m in Sources */,
 				07112AAC2010AC0C0044A6A7 /* YYTextRunDelegate.m in Sources */,
+				073AA3FA20188C4B00BFD68D /* VersionModel.m in Sources */,
 				07112ADB2010AC0C0044A6A7 /* YYFileHash.m in Sources */,
 				07112AC32010AC0C0044A6A7 /* NSArray+YYAdd.m in Sources */,
 				076A2CE42018713A003DF74F /* FMDatabaseAdditions.m in Sources */,
