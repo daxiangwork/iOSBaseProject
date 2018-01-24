@@ -131,6 +131,12 @@
 		0765C4CD2015CB5900C0B3C1 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4CC2015CB5900C0B3C1 /* timg.jpeg */; };
 		0765C4CF2015D02200C0B3C1 /* tm.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4CE2015D02200C0B3C1 /* tm.jpeg */; };
 		0765C4D12015D09C00C0B3C1 /* EEFileManager使用说明 in Resources */ = {isa = PBXBuildFile; fileRef = 0765C4D02015D09C00C0B3C1 /* EEFileManager使用说明 */; };
+		076A2CE32018713A003DF74F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A2CD82018713A003DF74F /* FMDatabaseQueue.m */; };
+		076A2CE42018713A003DF74F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A2CDB2018713A003DF74F /* FMDatabaseAdditions.m */; };
+		076A2CE52018713A003DF74F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A2CDC2018713A003DF74F /* FMDatabase.m */; };
+		076A2CE62018713A003DF74F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A2CE02018713A003DF74F /* FMDatabasePool.m */; };
+		076A2CE72018713A003DF74F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A2CE12018713A003DF74F /* FMResultSet.m */; };
+		076A2CEE201871A0003DF74F /* EEDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A2CED201871A0003DF74F /* EEDBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -386,6 +392,19 @@
 		0765C4CC2015CB5900C0B3C1 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		0765C4CE2015D02200C0B3C1 /* tm.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tm.jpeg; sourceTree = "<group>"; };
 		0765C4D02015D09C00C0B3C1 /* EEFileManager使用说明 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "EEFileManager使用说明"; sourceTree = "<group>"; };
+		076A2CD72018713A003DF74F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		076A2CD82018713A003DF74F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		076A2CD92018713A003DF74F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		076A2CDA2018713A003DF74F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		076A2CDB2018713A003DF74F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		076A2CDC2018713A003DF74F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		076A2CDD2018713A003DF74F /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		076A2CDE2018713A003DF74F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		076A2CDF2018713A003DF74F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		076A2CE02018713A003DF74F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		076A2CE12018713A003DF74F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		076A2CEC201871A0003DF74F /* EEDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EEDBManager.h; sourceTree = "<group>"; };
+		076A2CED201871A0003DF74F /* EEDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EEDBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +421,7 @@
 		07112994201088040044A6A7 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				076A2CD62018713A003DF74F /* FMDB */,
 				0765C4C52015B66E00C0B3C1 /* FileManager */,
 				0765C49620158FB900C0B3C1 /* CocoaLumberjack */,
 				071129D0201095650044A6A7 /* CoreMacro */,
@@ -881,6 +901,26 @@
 			path = FileManager;
 			sourceTree = "<group>";
 		};
+		076A2CD62018713A003DF74F /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				076A2CEC201871A0003DF74F /* EEDBManager.h */,
+				076A2CED201871A0003DF74F /* EEDBManager.m */,
+				076A2CD72018713A003DF74F /* FMDatabase.h */,
+				076A2CD82018713A003DF74F /* FMDatabaseQueue.m */,
+				076A2CD92018713A003DF74F /* FMResultSet.h */,
+				076A2CDA2018713A003DF74F /* FMDatabasePool.h */,
+				076A2CDB2018713A003DF74F /* FMDatabaseAdditions.m */,
+				076A2CDC2018713A003DF74F /* FMDatabase.m */,
+				076A2CDD2018713A003DF74F /* FMDatabaseQueue.h */,
+				076A2CDE2018713A003DF74F /* FMDB.h */,
+				076A2CDF2018713A003DF74F /* FMDatabaseAdditions.h */,
+				076A2CE02018713A003DF74F /* FMDatabasePool.m */,
+				076A2CE12018713A003DF74F /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -974,6 +1014,7 @@
 				07112A9E2010AC0C0044A6A7 /* YYWebImageOperation.m in Sources */,
 				07112AC72010AC0C0044A6A7 /* NSData+YYAdd.m in Sources */,
 				07112AD52010AC0C0044A6A7 /* YYThreadSafeDictionary.m in Sources */,
+				076A2CE32018713A003DF74F /* FMDatabaseQueue.m in Sources */,
 				07112ACF2010AC0C0044A6A7 /* NSDictionary+YYAdd.m in Sources */,
 				0765C4C82015B69500C0B3C1 /* EEFileManager.m in Sources */,
 				07112AD62010AC0C0044A6A7 /* YYSentinel.m in Sources */,
@@ -993,7 +1034,9 @@
 				07112AC62010AC0C0044A6A7 /* NSObject+YYAdd.m in Sources */,
 				07112ADA2010AC0C0044A6A7 /* YYGestureRecognizer.m in Sources */,
 				0765C4BE20158FB900C0B3C1 /* DDAbstractDatabaseLogger.m in Sources */,
+				076A2CE62018713A003DF74F /* FMDatabasePool.m in Sources */,
 				07112ADD2010AC0C0044A6A7 /* YYThreadSafeArray.m in Sources */,
+				076A2CE52018713A003DF74F /* FMDatabase.m in Sources */,
 				07112A922010AC0C0044A6A7 /* YYImageCache.m in Sources */,
 				071129BA201088040044A6A7 /* AFHTTPSessionManager.m in Sources */,
 				07112AB62010AC0C0044A6A7 /* UIBezierPath+YYAdd.m in Sources */,
@@ -1007,6 +1050,7 @@
 				07112AAC2010AC0C0044A6A7 /* YYTextRunDelegate.m in Sources */,
 				07112ADB2010AC0C0044A6A7 /* YYFileHash.m in Sources */,
 				07112AC32010AC0C0044A6A7 /* NSArray+YYAdd.m in Sources */,
+				076A2CE42018713A003DF74F /* FMDatabaseAdditions.m in Sources */,
 				07112AC12010AC0C0044A6A7 /* UIControl+YYAdd.m in Sources */,
 				071129C5201088040044A6A7 /* YTKChainRequestAgent.m in Sources */,
 				07112AAA2010AC0C0044A6A7 /* YYTextDebugOption.m in Sources */,
@@ -1027,6 +1071,7 @@
 				07112ABE2010AC0C0044A6A7 /* UIBarButtonItem+YYAdd.m in Sources */,
 				071129BB201088040044A6A7 /* AFURLSessionManager.m in Sources */,
 				07112A992010AC0C0044A6A7 /* UIButton+YYWebImage.m in Sources */,
+				076A2CE72018713A003DF74F /* FMResultSet.m in Sources */,
 				07112ADC2010AC0C0044A6A7 /* YYTimer.m in Sources */,
 				071129BF201088040044A6A7 /* YTKNetworkConfig.m in Sources */,
 				0765C4B820158FB900C0B3C1 /* CLIColor.m in Sources */,
@@ -1073,6 +1118,7 @@
 				07112AAE2010AC0C0044A6A7 /* NSParagraphStyle+YYText.m in Sources */,
 				07112A952010AC0C0044A6A7 /* YYImage.m in Sources */,
 				07112A962010AC0C0044A6A7 /* YYImageCoder.m in Sources */,
+				076A2CEE201871A0003DF74F /* EEDBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
